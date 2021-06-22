@@ -53,8 +53,9 @@ int main()
             }
             else
             {
-                int start_pos=next_pos-25-1;
-                res+=mp1[start_pos];
+                while(next_pos>25)
+                    next_pos=next_pos-25-1;
+                res+=mp1[next_pos];
             }
         }
     }
