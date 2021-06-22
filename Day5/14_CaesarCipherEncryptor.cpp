@@ -42,8 +42,12 @@ int main()
         int next_pos=pos+key;           // Adding the key  , and checking its existance in hash function
         if(next_pos<0)                  // If key is negative
         {
-            int virtu=25+next_pos+1;
-            res+=mp1[virtu];
+            while(next_pos<0)
+            {
+                next_pos+=25+1;
+            }
+            //int virtu=25+next_pos+1;
+            res+=mp1[next_pos];
         }
         else
         {
@@ -67,5 +71,5 @@ int main()
 
 /*
 Time Complexity: O(n)
-Space Coplexity: O(n)
+Space Coplexity: O(1)
 */
